@@ -8,7 +8,25 @@
     <title>Budget Tracker</title>
   </head>
   <body>
-    <h1>balance</h1>
-    <script src="./app.js"></script>
+    <div class="container">
+      <div class="main-wrapper">
+        <h1 class="title">New account</h1>
+        <form action="" class="form">
+          <input class="" type="text" name="Name" placeholder="Name" />
+          <input
+            class=""
+            type="number"
+            inputmode="decimal"
+            name="Amount"
+            id="amount"
+            placeholder="Amount"
+          />
+        </form>
+        <div class="btn-container">
+          <button id="createAccount" class="btn">Done</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./account.js"></script>
   </body>
 </html>
