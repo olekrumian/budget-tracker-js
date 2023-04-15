@@ -43,11 +43,19 @@ createAccountBtn.addEventListener('click', function (e) {
     if (getLocalStorage(accountName)) {
       console.log('Account already exists')
       const existValue = getLocalStorage(accountName)
-      const newItem = existValue
-        ? JSON.parse(existValue) + parseInt(amount)
-        : []
-      addToLocalStorage(accountName, newItem)
-      // window.location.href = './main.html'
+      const newItem =
+        existValue && typeof existValue === 'string' && existValue.trim() !== ''
+          ? JSON.parse(existValue)
+          : []
+
+      if (Array.isArray(newItem)) {
+        newItem.push(parseInt(amount))
+      } else {
+        newItem = [parseInt(amount)]
+      }
+
+      addToLocalStorage(accountName, JSON.stringify(newItem))
+      window.location.href = './main.html'
     } else {
       console.log('Account created')
       addToLocalStorage(accountName, parseInt(amount))
