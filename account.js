@@ -35,7 +35,7 @@ createAccountBtn.addEventListener('click', function (e) {
         ? parseFloat(existingValue) + parseFloat(amount)
         : amount
       localStorage.setItem(accountName, amountCalc)
-      // window.location.href = './main.html'
+      window.location.href = './main.html'
     } else {
       localStorage.setItem(accountName, amount)
     }
