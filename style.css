@@ -290,6 +290,14 @@ button {
   align-items: center;
 }
 
+.add-btn {
+  font-family: var(--ff-primary);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: var(--white-50);
+}
+
 .amount-wrapper {
   margin-top: 6.8rem;
   width: 100%;
