@@ -10,7 +10,7 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 
 addBtn.addEventListener('click', () => {
-  spendWrapper.style.top = '0'
+  spendWrapper.style.cssText = 'top: 0vh; z-index: 2;'
 })
 apendArrow.addEventListener('click', () => {
   spendWrapper.style.top = '100vh'
