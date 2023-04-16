@@ -2,6 +2,24 @@ const inputs = document.querySelectorAll('input')
 const createAccountBtn = document.querySelector('#createAccount')
 const alert = document.querySelector('.alert')
 
+function time() {
+  const date = new Date()
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  }
+  const day = date.toLocaleDateString('UK', options)
+  return day
+}
+
+function generateId() {
+  const timestamp = Date.now().toString(16)
+  const randomString = Math.random().toString(16).substring(2, 10)
+  const id = timestamp + randomString
+  return id
+}
+
 const getLocalStorage = (name) => {
   return localStorage.getItem(name)
     ? JSON.parse(localStorage.getItem(name))
@@ -24,6 +42,16 @@ createAccountBtn.addEventListener('click', function (e) {
   let accountName = inputs[0].value.toLowerCase()
   let amount = inputs[1].value
 
+  const budget = {
+    amount: amount,
+    description: accountName,
+    createsAd: time(),
+    id: generateId(),
+  }
+
+  const obj = JSON.stringify(budget)
+  console.log(obj)
+
   if (!accountName) {
     animateWithTimeout(inputs[0])
   } else if (!amount) {
@@ -35,7 +63,7 @@ createAccountBtn.addEventListener('click', function (e) {
         ? parseFloat(existingValue) + parseFloat(amount)
         : amount
       localStorage.setItem(accountName, amountCalc)
-      window.location.href = './main.html'
+      // window.location.href = './main.html'
     } else {
       localStorage.setItem(accountName, amount)
     }

@@ -193,6 +193,11 @@ button {
 
 .form > input {
   padding: 1.8rem;
+  font-family: var(--ff-primary);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: var(--black);
   border: 0.01rem solid var(--grey);
   background-color: var(--white-50);
   border-radius: 0.8rem;
@@ -265,6 +270,15 @@ button {
 }
 .btn {
   width: 100%;
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.add-btn {
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .margin {
