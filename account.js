@@ -19,17 +19,6 @@ function animateWithTimeout(element) {
   }, 820)
 }
 
-//TODO
-/* створити функцію яка перевіряє чи є бюджет в localStorage */
-//TODO
-/* якщо є то виводиться текст з попередженими данимими */
-//TODO
-/* якщо нема то запинається функиція */
-//TODO
-/* ствоить функицію яка додає аккаунт з введенимими данимими */
-//TODO
-/* якщо все працює то редереведить на головну сторінки */
-
 createAccountBtn.addEventListener('click', function (e) {
   e.preventDefault()
   let accountName = inputs[0].value.toLowerCase()
@@ -40,25 +29,15 @@ createAccountBtn.addEventListener('click', function (e) {
   } else if (!amount) {
     animateWithTimeout(inputs[1])
   } else {
-    if (getLocalStorage(accountName)) {
-      console.log('Account already exists')
-      const existValue = getLocalStorage(accountName)
-      const newItem =
-        existValue && typeof existValue === 'string' && existValue.trim() !== ''
-          ? JSON.parse(existValue)
-          : []
-
-      if (Array.isArray(newItem)) {
-        newItem.push(parseInt(amount))
-      } else {
-        newItem = [parseInt(amount)]
-      }
-
-      addToLocalStorage(accountName, JSON.stringify(newItem))
+    if (localStorage.getItem(accountName)) {
+      const existingValue = localStorage.getItem(accountName)
+      const amountCalc = existingValue
+        ? parseFloat(existingValue) + parseFloat(amount)
+        : amount
+      localStorage.setItem(accountName, amountCalc)
       window.location.href = './main.html'
     } else {
-      console.log('Account created')
-      addToLocalStorage(accountName, parseInt(amount))
+      localStorage.setItem(accountName, amount)
     }
   }
 })
