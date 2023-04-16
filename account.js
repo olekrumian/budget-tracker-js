@@ -24,6 +24,16 @@ createAccountBtn.addEventListener('click', function (e) {
   let accountName = inputs[0].value.toLowerCase()
   let amount = inputs[1].value
 
+  const budget = {
+    amount: amount,
+    description: accountName,
+    createsAd: time(),
+    id: generateId(),
+  }
+
+  const obj = JSON.stringify(budget)
+  console.log(obj)
+
   if (!accountName) {
     animateWithTimeout(inputs[0])
   } else if (!amount) {
@@ -35,7 +45,7 @@ createAccountBtn.addEventListener('click', function (e) {
         ? parseFloat(existingValue) + parseFloat(amount)
         : amount
       localStorage.setItem(accountName, amountCalc)
-      window.location.href = './main.html'
+      // window.location.href = './main.html'
     } else {
       localStorage.setItem(accountName, amount)
     }
