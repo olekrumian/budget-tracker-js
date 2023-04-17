@@ -49,6 +49,17 @@ createAccountBtn.addEventListener('click', function (e) {
     id: generateId(),
   }
 
+  //TODO array of objects with accounts
+  // const accounts = getLocalStorage('income')
+  // const account = accounts.find(
+  //   (account) => account.description === accountName
+  // )
+  // if (account) {
+  //   alert.innerHTML = 'Account with this name already exists'
+  //   animateWithTimeout(alert)
+  //   return
+  // }
+
   const obj = JSON.stringify(budget)
   localStorage.setItem('income', obj)
 
