@@ -81,7 +81,7 @@
   --ff-primary: 'Manrope', -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
-  --transition: all 0.3s ease-in-out;
+  --transition: all 0.25s ease-out;
   --spacing: -0.01rem;
 }
 
@@ -392,11 +392,11 @@ button {
 }
 
 .spend-account-select {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 136px);
+  grid-template-columns: repeat(auto-fill, 70px);
+  gap: 2.4rem 1.6rem;
+  align-items: start;
   border-bottom: 0.1rem solid var(--grey-125);
   margin: 1.6rem 0rem 0rem 0rem;
   padding: 0rem 0rem 2.4rem 0rem;
@@ -409,9 +409,9 @@ button {
   justify-content: center;
   align-items: center;
 }
-.add-account:not(:last-child) {
+/* .add-account:not(:last-child) {
   margin: 1.6rem 2.4rem 0rem 0rem;
-}
+} */
 .add-account-title {
   margin: 0rem 0rem 0.8rem 0rem;
   font-family: var(--ff-primary);
@@ -438,15 +438,19 @@ button {
 .spend-category-wrapper {
   margin: 0.8rem 0rem 0rem 0rem;
   padding: 0rem 0rem 2.3rem 0rem;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: flex-start;
+  align-items: flex-start; */
+  display: grid;
+  align-items: start;
+  grid-template-rows: repeat(auto-fill, 13.6rem);
+  grid-template-columns: repeat(auto-fill, 7rem);
+  gap: 2.4rem 1.6rem;
   border-bottom: 0.1rem solid var(--grey-125);
 }
-.spend-category-inputs {
-}
+
 .spend-form {
   margin: 2.4rem 0rem 3.2rem 0rem;
 }
@@ -454,4 +458,22 @@ button {
 .btn-100 {
   width: 100%;
   margin: 0rem 0rem 3.2rem 0rem;
+}
+
+.styled-checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.styled-checkbox:checked + .checkbox-label .add-account-circle {
+  border: 0.1rem solid var(--black); /* Apply the border style when the checkbox is checked */
 }
