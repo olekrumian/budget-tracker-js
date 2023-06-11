@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Budget Tracker</title>
   </head>
-  <body>
+  <body onload="checkLocalStorage()">
     <div class="container">
       <div class="main-wrapper start-page">
         <h1 class="title">Create new account</h1>
@@ -19,4 +19,11 @@
       </div>
     </div>
   </body>
+  <script>
+    function checkLocalStorage() {
+      if (localStorage.getItem('income')) {
+        window.location.href = 'main.html'
+      }
+    }
+  </script>
 </html>

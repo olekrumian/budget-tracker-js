@@ -42,23 +42,28 @@
         </div>
         <div class="spend-account-select">
           <div class="add-account">
-            <p class="add-account-title local-account">Monobank</p>
-            <div class="add-account-circle">
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.5 20C4.97967 19.9939 0.506062 15.5203 0.5 10V9.8C0.609931 4.30453 5.13459 -0.072041 10.6307 0.000882959C16.1268 0.0738069 20.5337 4.56889 20.4978 10.0653C20.4619 15.5618 15.9966 19.9989 10.5 20ZM10.484 18H10.5C14.9167 17.9956 18.4942 14.4127 18.492 9.99601C18.4898 5.57929 14.9087 2.00001 10.492 2.00001C6.07528 2.00001 2.49421 5.57929 2.492 9.99601C2.48979 14.4127 6.06729 17.9956 10.484 18ZM11.5 16H9.5V14H11.5V16ZM11.5 13H9.5C9.4684 11.6977 10.1461 10.4808 11.27 9.822C11.93 9.316 12.5 8.88 12.5 8C12.5 6.89543 11.6046 6 10.5 6C9.39543 6 8.5 6.89543 8.5 8H6.5V7.91C6.51608 6.48094 7.29333 5.16901 8.53897 4.4684C9.78461 3.76779 11.3094 3.78495 12.539 4.5134C13.7685 5.24186 14.5161 6.57094 14.5 8C14.4284 9.07902 13.8497 10.0603 12.94 10.645C12.1177 11.1612 11.5847 12.0328 11.5 13Z"
-                  fill="#18181B"
-                />
-              </svg>
-            </div>
+            <input type="checkbox" id="ing" class="styled-checkbox" />
+            <label for="ing" class="checkbox-label">
+              <p class="add-account-title local-account">ING</p>
+              <div class="add-account-circle">
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5 20C4.97967 19.9939 0.506062 15.5203 0.5 10V9.8C0.609931 4.30453 5.13459 -0.072041 10.6307 0.000882959C16.1268 0.0738069 20.5337 4.56889 20.4978 10.0653C20.4619 15.5618 15.9966 19.9989 10.5 20ZM10.484 18H10.5C14.9167 17.9956 18.4942 14.4127 18.492 9.99601C18.4898 5.57929 14.9087 2.00001 10.492 2.00001C6.07528 2.00001 2.49421 5.57929 2.492 9.99601C2.48979 14.4127 6.06729 17.9956 10.484 18ZM11.5 16H9.5V14H11.5V16ZM11.5 13H9.5C9.4684 11.6977 10.1461 10.4808 11.27 9.822C11.93 9.316 12.5 8.88 12.5 8C12.5 6.89543 11.6046 6 10.5 6C9.39543 6 8.5 6.89543 8.5 8H6.5V7.91C6.51608 6.48094 7.29333 5.16901 8.53897 4.4684C9.78461 3.76779 11.3094 3.78495 12.539 4.5134C13.7685 5.24186 14.5161 6.57094 14.5 8C14.4284 9.07902 13.8497 10.0603 12.94 10.645C12.1177 11.1612 11.5847 12.0328 11.5 13Z"
+                    fill="#18181B"
+                  />
+                </svg>
+              </div>
+            </label>
+
             <p class="add-account-amount">₴</p>
           </div>
+
           <div class="add-account">
             <p class="add-account-title">Account</p>
             <div class="add-account-circle">
@@ -80,8 +85,8 @@
         </div>
         <div class="spend-category-wrapper">
           <div class="add-account">
-            <input type="checkbox" id="food-checkbox" class="styled-checkbox" />
-            <label for="food-checkbox" class="checkbox-label">
+            <input type="checkbox" id="food" class="styled-checkbox" />
+            <label for="food" class="checkbox-label">
               <p class="add-account-title">Food</p>
               <div class="add-account-circle">
                 <svg
@@ -100,82 +105,8 @@
             </label>
             <p class="add-account-amount">₴0</p>
           </div>
-          <div class="add-account">
-            <input
-              type="checkbox"
-              id="transoprt-checkbox"
-              class="styled-checkbox"
-            />
-            <label for="transoprt-checkbox" class="checkbox-label">
-              <p class="add-account-title">Transport</p>
-              <div class="add-account-circle">
-                <svg
-                  width="21"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.5 20C4.97967 19.9939 0.506062 15.5203 0.5 10V9.8C0.609931 4.30453 5.13459 -0.072041 10.6307 0.000882959C16.1268 0.0738069 20.5337 4.56889 20.4978 10.0653C20.4619 15.5618 15.9966 19.9989 10.5 20ZM10.484 18H10.5C14.9167 17.9956 18.4942 14.4127 18.492 9.99601C18.4898 5.57929 14.9087 2.00001 10.492 2.00001C6.07528 2.00001 2.49421 5.57929 2.492 9.99601C2.48979 14.4127 6.06729 17.9956 10.484 18ZM11.5 16H9.5V14H11.5V16ZM11.5 13H9.5C9.4684 11.6977 10.1461 10.4808 11.27 9.822C11.93 9.316 12.5 8.88 12.5 8C12.5 6.89543 11.6046 6 10.5 6C9.39543 6 8.5 6.89543 8.5 8H6.5V7.91C6.51608 6.48094 7.29333 5.16901 8.53897 4.4684C9.78461 3.76779 11.3094 3.78495 12.539 4.5134C13.7685 5.24186 14.5161 6.57094 14.5 8C14.4284 9.07902 13.8497 10.0603 12.94 10.645C12.1177 11.1612 11.5847 12.0328 11.5 13Z"
-                    fill="#18181B"
-                  />
-                </svg>
-              </div>
-            </label>
-            <p class="add-account-amount">₴0</p>
-          </div>
-          <div class="add-account">
-            <input
-              type="checkbox"
-              id="health-checkbox"
-              class="styled-checkbox"
-            />
-            <label for="health-checkbox" class="checkbox-label">
-              <p class="add-account-title">Health</p>
-              <div class="add-account-circle">
-                <svg
-                  width="21"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.5 20C4.97967 19.9939 0.506062 15.5203 0.5 10V9.8C0.609931 4.30453 5.13459 -0.072041 10.6307 0.000882959C16.1268 0.0738069 20.5337 4.56889 20.4978 10.0653C20.4619 15.5618 15.9966 19.9989 10.5 20ZM10.484 18H10.5C14.9167 17.9956 18.4942 14.4127 18.492 9.99601C18.4898 5.57929 14.9087 2.00001 10.492 2.00001C6.07528 2.00001 2.49421 5.57929 2.492 9.99601C2.48979 14.4127 6.06729 17.9956 10.484 18ZM11.5 16H9.5V14H11.5V16ZM11.5 13H9.5C9.4684 11.6977 10.1461 10.4808 11.27 9.822C11.93 9.316 12.5 8.88 12.5 8C12.5 6.89543 11.6046 6 10.5 6C9.39543 6 8.5 6.89543 8.5 8H6.5V7.91C6.51608 6.48094 7.29333 5.16901 8.53897 4.4684C9.78461 3.76779 11.3094 3.78495 12.539 4.5134C13.7685 5.24186 14.5161 6.57094 14.5 8C14.4284 9.07902 13.8497 10.0603 12.94 10.645C12.1177 11.1612 11.5847 12.0328 11.5 13Z"
-                    fill="#18181B"
-                  />
-                </svg>
-              </div>
-            </label>
-            <p class="add-account-amount">₴0</p>
-          </div>
-          <div class="add-account">
-            <input
-              type="checkbox"
-              id="other-checkbox"
-              class="styled-checkbox"
-            />
-            <label for="other-checkbox" class="checkbox-label">
-              <p class="add-account-title">Other</p>
-              <div class="add-account-circle">
-                <svg
-                  width="21"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.5 20C4.97967 19.9939 0.506062 15.5203 0.5 10V9.8C0.609931 4.30453 5.13459 -0.072041 10.6307 0.000882959C16.1268 0.0738069 20.5337 4.56889 20.4978 10.0653C20.4619 15.5618 15.9966 19.9989 10.5 20ZM10.484 18H10.5C14.9167 17.9956 18.4942 14.4127 18.492 9.99601C18.4898 5.57929 14.9087 2.00001 10.492 2.00001C6.07528 2.00001 2.49421 5.57929 2.492 9.99601C2.48979 14.4127 6.06729 17.9956 10.484 18ZM11.5 16H9.5V14H11.5V16ZM11.5 13H9.5C9.4684 11.6977 10.1461 10.4808 11.27 9.822C11.93 9.316 12.5 8.88 12.5 8C12.5 6.89543 11.6046 6 10.5 6C9.39543 6 8.5 6.89543 8.5 8H6.5V7.91C6.51608 6.48094 7.29333 5.16901 8.53897 4.4684C9.78461 3.76779 11.3094 3.78495 12.539 4.5134C13.7685 5.24186 14.5161 6.57094 14.5 8C14.4284 9.07902 13.8497 10.0603 12.94 10.645C12.1177 11.1612 11.5847 12.0328 11.5 13Z"
-                    fill="#18181B"
-                  />
-                </svg>
-              </div>
-            </label>
-            <p class="add-account-amount">₴0</p>
-          </div>
-          <div class="add-account">
+
+          <div id="addCategory" class="add-account">
             <p class="add-account-title">Category</p>
             <div class="add-account-circle">
               <svg
@@ -195,7 +126,7 @@
         </div>
         <div class="spend-category-inputs">
           <form action="" class="form spend-form">
-            <input class="" type="text" name="Name" placeholder="Name" />
+            <input class="" type="text" name="Name" placeholder="Comment" />
             <input
               class="expenseName"
               type="number"
