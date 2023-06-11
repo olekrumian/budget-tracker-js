@@ -160,6 +160,8 @@ button {
   width: 100%;
   height: calc(100vh - var(--footer-height));
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-wrapper {
@@ -356,12 +358,18 @@ button {
   justify-content: start;
   align-items: center;
 }
+.spend-header-left {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .spend-arrow {
   padding: 0;
   background-color: transparent;
   width: 2rem;
-  height: 4rem;
+  height: 5.5rem;
 }
 .spend-btn-wrapper {
   margin: auto;
@@ -476,4 +484,19 @@ button {
 
 .styled-checkbox:checked + .checkbox-label .add-account-circle {
   border: 0.1rem solid var(--black);
+}
+
+.add-new-account-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  z-index: 3;
+}
+.add-new-account-modal .spend-header {
+  display: flex;
+  flex-direction: column;
 }

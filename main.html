@@ -18,10 +18,43 @@
         <button class="add-btn">Add</button>
       </div>
     </div>
+    <div class="add-new-account-modal">
+      <div class="container">
+        <div class="spend-header-left">
+          <button class="spend-arrow">
+            <svg
+              width="20"
+              height="11"
+              viewBox="0 0 20 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.83 4.5L6.41 1.91L5 0.5L0 5.5L5 10.5L6.41 9.09L3.83 6.5H20V4.5H3.83Z"
+                fill="#18181B"
+              />
+            </svg>
+          </button>
+          <h1 class="title">New account</h1>
+          <form action="" class="form spend-form">
+            <input class="" type="text" name="Name" placeholder="Name" />
+            <input
+              class="expenseName"
+              type="number"
+              inputmode="decimal"
+              name="Amount"
+              id="amount"
+              placeholder="Amount"
+            />
+          </form>
+          <button class="add-btn btn-100">Done</button>
+        </div>
+      </div>
+    </div>
     <div class="spend-wrapper">
       <div class="container">
         <div class="spend-header">
-          <button class="spend-arrow">
+          <button class="spend-arrow spend-arrow-back">
             <svg
               width="20"
               height="11"
@@ -64,7 +97,7 @@
             <p class="add-account-amount">₴</p>
           </div>
 
-          <div class="add-account">
+          <div id="addAccount" class="add-account">
             <p class="add-account-title">Account</p>
             <div class="add-account-circle">
               <svg

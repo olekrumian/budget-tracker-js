@@ -1,11 +1,13 @@
 const amount = document.querySelector('.amount')
 const addBtn = document.querySelectorAll('.add-btn')
 const spendWrapper = document.querySelector('.spend-wrapper')
-const spendArrow = document.querySelector('.spend-arrow')
+const spendArrow = document.querySelectorAll('.spend-arrow')
 const spendBtnWrapper = document.querySelector('.spend-btn-wrapper')
 const spendCategoryWrapper = document.querySelector('.spend-category-wrapper')
 const accAmount = document.querySelector('.add-account-amount')
 const localAccountTitle = document.querySelector('.local-account')
+const newAccount = document.querySelector('#addAccount')
+const newAccountModal = document.querySelector('.add-new-account-modal')
 
 const addBtnNew = document.querySelector('.btn-100')
 const addCategory = document.getElementById('addCategory')
@@ -17,7 +19,6 @@ const checkLocalStorage = () => {
     const incomeObj = JSON.parse(income)
     amount.innerHTML = `₴ ${incomeObj.amount}`
     accAmount.innerHTML = `₴ ${incomeObj.amount}`
-    localAccountTitle.innerHTML = `${description}`
   } else {
     amount.innerHTML = `₴0`
     accAmount.innerHTML = `₴0`
@@ -35,12 +36,22 @@ addBtn[1].addEventListener('click', () => {
   spendWrapper.style.cssText = 'top: 100vh; z-index: 2;'
 })
 
-spendArrow.addEventListener('click', () => {
-  spendWrapper.style.top = '100vh'
+spendArrow.forEach((element) => {
+  element.addEventListener('click', () => {
+    if (element.classList.contains('spend-arrow-back')) {
+      spendWrapper.style.top = '100vh'
+    } else {
+      newAccountModal.style.display = 'none'
+    }
+  })
 })
 
 addCategory.addEventListener('click', () => {
   console.log('done')
+})
+newAccount.addEventListener('click', () => {
+  console.log('done')
+  newAccountModal.style.display = 'block'
 })
 
 function addToLocalStorage(e) {
